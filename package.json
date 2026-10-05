@@ -1,0 +1,17 @@
+{
+  "name": "utf-8-validator",
+  "version": "0.1.0",
+  "description": "Validates and decodes UTF-8 byte sequences, rejecting overlong encodings and invalid surrogate pairs.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
