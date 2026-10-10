@@ -46,3 +46,10 @@ UTF-16 handling. Callers who want a string can `String.fromCodePoint(...r.codepo
 - A 5- or 6-byte lead byte (0xF8..0xFD) is rejected outright. RFC 3629 caps
   UTF-8 at four bytes; the earlier scheme that allowed longer sequences is not
   accepted here.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
